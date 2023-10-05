@@ -25,16 +25,14 @@ function showSuggestions(results, inputVal) {
 	let input = inputVal.toLowerCase();
 	suggestions.innerHTML = ""; // clear existing results
 
-
 	for (let i = 0; i < results.length; i++){
 			if (results[i].toLowerCase().includes(input)) {
 				const createLi = document.createElement('li');
-				createLi.innerText = results[i];
+				console.log(input)
+				createLi.innerHTML = results[i];
 				suggestions.appendChild(createLi);
-
 			}
 		}
-		
 		return suggestions;
 	}	
 
@@ -43,11 +41,13 @@ function showSuggestions(results, inputVal) {
 function useSuggestion(e) {
 	let selectedValue = e.target.innerHTML;
 	input.value = selectedValue;
-	
+	suggestions.innerHTML = ""; // clear existing results
+
 }
 
 function hoverHighlight(e){
-	e.target.style.backgroundColor = 'lightpink';
+	let input = e.target.innerHTML;
+	input.style.backgroundColor = 'orangered';
 
 		setTimeout(() => {
 			e.target.style.backgroundColor = '';

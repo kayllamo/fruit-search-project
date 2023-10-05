@@ -4,7 +4,7 @@
 }
 
 :focus {
- /* TODO */
+  outline: none;
 }
 
 body {
@@ -13,42 +13,57 @@ body {
 
 input {
   display: block;
-  width: 33%;
-  height: 2em;
-  position: absolute;
-  left: 50% vh vw;
-  top: 50%;
+  height: 3em;
+  padding-left: 10px;
+  color: grey;
+  border-bottom: 2px solid orangered;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 20px;
 }
 
 .search-container {
-  display: grid;
-  justify-items: center;
+  position: relative;
+  top: 50vh;
+  left: 25%;
 }
 
 .search-container input,
 .search-container .suggestions {
-  /* TODO */
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .search-container input {
- /* TODO */
+  min-width: 50%;
+  
 }
 .search-container .suggestions {
-   /* TODO */
+   display: block;
+   position: relative;
+   background-color: rgba(255, 255, 255, 0.5);;
+   max-width: 50%;
+   max-height: 400px;
+   overflow: scroll;
+
 }
 
 ul {
-  /* TODO */
+  color: black;
+
 }
 ul.has-suggestions {
-  /* TODO */
+  
 }
 ul li {
+  padding: 10px;
   list-style-type: none;
-  text-align: left;
+  font-size: 1.5em;
 
 }
 ul li:hover {
-  /* TODO */
+  background-color: orangered;
+  cursor: pointer;
+  margin-right: 40px;
 }
 
 input {
